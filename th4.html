@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai 4</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+      }
+      .container {
+        width: 700px;
+        height: 80%;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border: 1rem solid rgb(242, 240, 240);
+        border-top: 1.2rem solid rgb(242, 240, 240);
+        border-bottom: 2rem solid rgb(242, 240, 240);
+      }
+      h3 {
+        border-bottom: 2px solid #797676;
+      }
+      .input_in4 label {
+        width: 150px;
+        float: left;
+      }
+      .input_in4 input {
+        width: 60%;
+        height: 20px;
+        margin-bottom: 5px;
+      }
+      li {
+        list-style: none;
+      }
+      b {
+        width: 100px;
+        float: left;
+      }
+      select {
+        margin-bottom: 5px;
+        border-radius: 5px;
+        height: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      textarea {
+        width: 225%;
+        height: 100px;
+      }
+      .input_in4_active label {
+        width: 150px;
+        float: left;
+      }
+      .input_in4_pre b{
+        width: 150px;
+      }
+      #gravy{
+        margin-left: 154px;
+      }
+      .input_in4_human label{
+        width: 148px;
+        float: left;
+      }
+      .input_in4_human input{
+        width: 135%;
+        height: 20px;
+      } 
+      .bottom{
+        display: flex;
+        justify-content: space-between;
+      }
+      #emp,#lname{
+        border: none;
+      }
+      button{
+        background: #000;
+        color:#ffffff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Basic Info</h3>
+      <form action="">
+        <div class="input_in4">
+          <label for="emp">Employee ID</label>
+          <input type="text" id="emp" value="9" readonly />
+        </div>
+        <div class="input_in4">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" value="Dodsworth" readonly/>
+        </div>
+        <div class="input_in4">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" required />
+        </div>
+        <div class="input_in4_1">
+          <table>
+            <tr>
+              <td><b>Gender</b></td>
+              <td>
+                <ul>
+                  <li>
+                    <input type="radio" name="gender" id="Male" />
+                    <label for="Male">Male</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="gender" id="fmale" />
+                    <label for="fmale">Female</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="gender" id="xxx" />
+                    <label for="xxx">XXX</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="gender" id="zzz" checked />
+                    <label for="zzz">ZZZ</label>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="input_in4">
+          <label for="title">Title</label>
+          <input type="text" id="title" required />
+        </div>
+        <div class="input_in4">
+          <label for="suf">Suffix</label>
+          <input type="text" id="suf" required />
+        </div>
+        <div class="input_in4">
+          <label for="bdate">BirthDate</label>
+          <input type="text" id="bdate" required />
+        </div>
+        <div class="input_in4">
+          <label for="hdate">HireDate</label>
+          <input type="text" id="hdate" required />
+        </div>
+        <div class="input_in4">
+          <label for="ssn">SSN # (if applicable)</label>
+          <input type="text" id="ssn" />
+        </div>
+        <div class="input_in4">
+          <label for="rp">Reports To</label>
+          <select name="rp" id="rp">
+            <option value="Buchanan">Buchanan</option>
+          </select>
+        </div>
+      </form>
+      <h3>Contact Info</h3>
+      <form action="#">
+        <div class="input_in4">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@example.com"
+            required
+          />
+        </div>
+        <div class="input_in4">
+          <label for="add">Address</label>
+          <input type="text" id="add" required />
+        </div>
+        <div class="input_in4">
+          <label for="city">City</label>
+          <input type="text" id="city" required />
+        </div>
+        <div class="input_in4">
+          <label for="reg">Region</label>
+          <input type="text" id="reg" />
+        </div>
+        <div class="input_in4">
+          <label for="pos">Postal Code</label>
+          <input type="text" id="pos" required />
+        </div>
+        <div class="input_in4">
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="russia">Russian Federation</option>
+          </select>
+        </div>
+        <div class="input_in4">
+          <label for="tel">US Home Phone</label>
+          <input type="tel" id="tel" required />
+        </div>
+        <div class="input_in4">
+          <label for="photo">Photo</label>
+          <input type="text" id="photo" placeholder="xxx.bmp" />
+        </div>
+      </form>
+      <h3>Optional Info</h3>
+      <form action="#">
+        <div class="input_in4">
+          <table>
+            <tr>
+              <td><label for="note">Notes</label></td>
+              <td>
+                <textarea name="note" id="note"></textarea>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="input_in4_pre">
+          <b class="f1">Preferred Shift</b>
+              <div>
+                <input type="checkbox" name="regular" id="regular" />
+                <label for="regular">Regular</label><br>
+                <input type="checkbox" name="gravy" id="gravy" checked />
+                <label for="gravy">Gravy Yard</label>
+              </div> 
+          </ul>
+        </div>
+        <div class="input_in4_active">
+          <label for="active">Active?</label>
+          <input type="checkbox" name="active" id="active" />
+        </div>
+        <div class="input_in4_human">
+          <table>
+            <tr>
+              <td><label>Are you Human?</label></td>
+              <td id = "code">
+                <div style="opacity: 0.3; font-size: 200%" id = "cap">TIDAWO</div>
+                <label for="robot" style="margin-left: 160px">Click to change</label> <br />
+                <input type="text" id="robot" required />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+      <hr />
+      <div class="bottom">
+        <div class="move"><button>Next</button><br />*required</div>
+        <div class="submit">
+          <button>Submit</button>
+          <button>Cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
